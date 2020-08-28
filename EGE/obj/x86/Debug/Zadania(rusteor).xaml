@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="EGE.Zadania_rusteor_"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EGE"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:ConnectionId='2' x:Name="grid" Margin="0,-20,0.333,0.333">
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/фон.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="541*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="39*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="173*"/>
+            <ColumnDefinition Width="199*"/>
+            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="183*"/>
+            <ColumnDefinition Width="447*"/>
+            <ColumnDefinition Width="104*"/>
+            <ColumnDefinition Width="89*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Center" Margin="158.333,103.333,40.334,438" VerticalAlignment="Center" d:IsHidden="True" Grid.Column="1" Height="0" Grid.Row="2" Width="0">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="Assets/Фон с мальчиком.png"/>
+            </StackPanel.Background>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Margin="0,23,0,7.667" VerticalAlignment="Center" MinWidth="70" MinHeight="70" Height="70" Width="70">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="Assets/кнопка настроек.png" Stretch="Uniform"/>
+            </StackPanel.Background>
+        </StackPanel>
+        <Button Width="70" HorizontalAlignment="Left" VerticalAlignment="Center" Height="64" Margin="0,19,0,17.667" Opacity="0">
+            <Button.Flyout>
+                <Flyout x:ConnectionId='5' x:Name="dialogBox">
+                    <Flyout.Content>
+                        <StackPanel>
+                            <Button x:ConnectionId='6'                    Content="Рейтинг" Margin="0 6 0 0" HorizontalAlignment="Center"/>
+                            <Button x:ConnectionId='7'                    Content="⠀Главное  меню⠀" Margin="0 6 0 0" HorizontalAlignment="Center" />
+                            <Button x:ConnectionId='8'                    Content="⠀⠀ ⠀⠀Выход⠀⠀⠀⠀" Margin="0 6 0 0" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Flyout.Content>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="4" Margin="-0.001,5.333,89,1">
+            <StackPanel HorizontalAlignment="Stretch" Margin="0,0.333,0.667,0" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="Assets/rteor.jpg" Stretch="Uniform"/>
+                </StackPanel.Background>
+            </StackPanel>
+        </ScrollViewer>
+    
+        <TextBlock HorizontalAlignment="Stretch" Margin="3.666,0,16.667,0.667" Text="Русский язык" TextWrapping="Wrap" VerticalAlignment="Bottom" Grid.Column="2" FocusVisualPrimaryBrush="#FFFF7500" Foreground="#FFEA6C00" FontSize="48" FontWeight="Bold" TextAlignment="Center" Height="64" Grid.ColumnSpan="4"/>
+        <TextBox x:ConnectionId='3' x:Name="numInput" HorizontalAlignment="Stretch" Margin="0.666,2,103.667,38" FontSize="25" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan="2" TextAlignment="Left" Padding="0,0,0,0" UseLayoutRounding="False"/>
+        <Button x:ConnectionId='4' Content="Перейти!"                            Margin="0.333,2,89,38" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+        <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="198.333,7,0,7.333" Text="Введите номер задания:" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" FontSize="20" Height="29" Width="244"/>
+    </Grid>
+</Page>
+
+

@@ -1,0 +1,92 @@
+﻿<Page
+    x:Class="EGE.MathTeor3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EGE"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:ConnectionId='2' x:Name="grid" Margin="0,-20,0.333,0.333">
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/фон.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="542*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="31*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="173*"/>
+            <ColumnDefinition Width="199*"/>
+            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="183*"/>
+            <ColumnDefinition Width="447*"/>
+            <ColumnDefinition Width="104*"/>
+            <ColumnDefinition Width="89*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Center" Margin="158.333,12.333,40.334,3.667" VerticalAlignment="Center" d:IsHidden="True" Grid.Column="1" Height="0" Grid.Row="1" Width="0">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="Assets/Фон с мальчиком.png"/>
+            </StackPanel.Background>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Margin="0,23,0,7.667" VerticalAlignment="Center" MinWidth="70" MinHeight="70" Height="70" Width="70">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="Assets/кнопка настроек.png" Stretch="Uniform"/>
+            </StackPanel.Background>
+        </StackPanel>
+        <Button Width="70" HorizontalAlignment="Left" VerticalAlignment="Center" Height="64" Margin="0,19,0,17.667" Opacity="0">
+            <Button.Flyout>
+                <Flyout x:ConnectionId='6' x:Name="dialogBox">
+                    <Flyout.Content>
+                        <StackPanel>
+                            <Button x:ConnectionId='7'                    Content="Рейтинг" Margin="0 6 0 0" HorizontalAlignment="Center"/>
+                            <Button x:ConnectionId='8'                    Content="⠀Главное  меню⠀" Margin="0 6 0 0" HorizontalAlignment="Center" />
+                            <Button x:ConnectionId='9'                    Content="⠀⠀ ⠀⠀Выход⠀⠀⠀⠀" Margin="0 6 0 0" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Flyout.Content>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
+        <TextBlock HorizontalAlignment="Stretch" Margin="3.666,0,16.667,0.667" Text="Задание 3" TextWrapping="Wrap" VerticalAlignment="Bottom" Grid.Column="2" FocusVisualPrimaryBrush="#FFFF7500" Foreground="#FFEA6C00" FontSize="48" FontWeight="Bold" TextAlignment="Center" Height="64" Grid.ColumnSpan="4"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="5" Margin="-0.001,5.333,89,1" HorizontalScrollMode="Auto" ZoomMode="Enabled">
+            <StackPanel>
+                <Image HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Stretch" Width="440" Height="270" Source="Assets/3.4.png">
+                    <Image.FocusVisualSecondaryBrush>
+                        <ImageBrush ImageSource="Assets/2.png"/>
+                    </Image.FocusVisualSecondaryBrush>
+                    <Image.FocusVisualPrimaryBrush>
+                        <ImageBrush ImageSource="Assets/2.png"/>
+                    </Image.FocusVisualPrimaryBrush>
+                </Image>
+                <TextBlock x:ConnectionId='5' x:Name="Zadanie1" HorizontalAlignment="Stretch" FontSize="20" MinWidth="300" MinHeight="300" Margin="0,-468,0,0">
+                <Run Text="Третье задание в ЕГЭ профильного уровня по математике направлено на"/>
+                <LineBreak/>
+                <Run Text="проверку базовых знаний по геометрии. Сначала необходимо"/>
+                <LineBreak/>
+                <Run Text="внимательно прочитать условие, а затем, зная формулу, решить задачу."/>
+                <LineBreak/>
+                <Run Text=" "/>
+                <LineBreak/>
+                <Run Text="Пример: "/>
+                <LineBreak/>
+                <Run Text="Найдите радиус окружности описанной около треугольника, изображённого на "/>
+                <LineBreak/>
+                <Run Text="клетчатой бумаге с размером клетки 1 см х 1 см. Ответ дайте в сантиметрах."/>
+                <LineBreak/><Run Text=" "/><LineBreak/><Run Text=" "/><LineBreak/><Run Text=" "/><LineBreak/><Run Text=" "/><LineBreak/><Run Text=" "/><LineBreak/><Run Text=" "/><LineBreak/><Run Text=" "/><LineBreak/><Run Text=" "/><LineBreak/><Run Text=" "/><LineBreak/><Run Text=" "/><LineBreak/><Run Text=" "/><LineBreak/>
+                <Run Text="Решение задачи: "/>
+                <LineBreak/>
+                <Run Text="Поскольку в прямоугольном треугольнике R= AB/2"/>
+                <LineBreak/>
+                <Run Text="A AB^2=3^2+4^2, то AB=5, R=2,5"/>
+                </TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+        <TextBox x:ConnectionId='3' x:Name="nameInput" HorizontalAlignment="Stretch" Margin="182.999,2,0.667,0.333" FontSize="25" Grid.Row="3" Grid.Column="3" TextAlignment="Left" Padding="0,0,0,0" UseLayoutRounding="False" VerticalAlignment="Stretch" Grid.ColumnSpan="2"/>
+        <Button x:ConnectionId='4' Content="Перейти"                            Margin="0.333,1,89,0.333" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="2" />
+        <TextBlock HorizontalAlignment="Stretch" Margin="0,0,0,0" Text="Введите номер задания:" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="3" Grid.Column="2" FontSize="20" Grid.ColumnSpan="2"/>
+    </Grid>
+</Page>
+
